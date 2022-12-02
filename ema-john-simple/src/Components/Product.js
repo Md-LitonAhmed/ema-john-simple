@@ -2,24 +2,30 @@ import React from 'react';
 import './Product.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate  } from 'react-router-dom';
 
 export default function Product(props) {
-const {img, name,seller,price, stock}=props.product;
-    
+const {img, name,seller,price, stock, key}=props.product;
+
+const navigate = useNavigate();
   return (
     <div className='product'>
       <div>
         <img src={img} alt="" />
       </div>
-      <div>
-        <h4 className='product-name'>{name}</h4>
+      <div className='product-desc'>
+        <h4 className='product-name'  onClick={() => {
+          navigate("/product/" + key);
+        }}>{name}</h4>
         <br/>
-        <p><small>By {seller}</small></p>
+        <p>By {seller}</p>
         <p>${price}</p>
-        <p><small>Only {stock} left in stock-Order soon</small></p> 
-        <button className='btn-add' onClick={()=> props.handleAddProduct(props.product)}> < FontAwesomeIcon icon={faShoppingCart}/> Add to cart</button>
+        <p>Only {stock} left in stock-Order soon</p> 
+        {props.AddToCart && 
+          <button className='btn-add' onClick={()=> props.handleAddProduct(props.product)}>
+            < FontAwesomeIcon icon={faShoppingCart}/> Add to cart</button>
+        }
       </div>
-        
     </div>
   )
 }

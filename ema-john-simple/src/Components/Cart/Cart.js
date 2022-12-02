@@ -1,5 +1,7 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 export default function Cart(props) {
     const cart=props.cart;
     let price=0
@@ -30,6 +32,8 @@ const TotalPrice=price+shippingCost+TaxVAT;
         <p>Tax + VAT : {formated(TaxVAT)}</p>
         <p>Shipping Cost: {formated(shippingCost)}</p>
         <p> Total price:{formated(TotalPrice)}</p> 
+
+        <button className='btn-add'> <Link to="/review">Review Orders</Link> </button>
     </div>
   )
 }
