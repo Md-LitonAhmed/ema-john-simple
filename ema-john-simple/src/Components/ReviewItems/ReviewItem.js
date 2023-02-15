@@ -6,7 +6,7 @@ import deleteFromDb from '../../utilities/fakedb';
 
 export default function ReviewItem(props) {
 
-    const {name, quantity,key}=props.product;
+    const {name, quantity,key,price}=props.product;
     const itemStyle={
         borderBottom:'1px solid gray',
         padding:'10px',
@@ -16,7 +16,10 @@ export default function ReviewItem(props) {
     <div style={itemStyle}>
         <h1 className='product-name'>{name}</h1>
         <p>Quentity: {quantity}</p>
-        <button className='btn-add' >
+        <p>Price: <small>${price}</small></p>
+        <button className='btn-add' 
+        onClick={() => props.removeProduct(key)}
+        >
             < FontAwesomeIcon icon={faTrash }/> Remove</button>
     </div>
   )

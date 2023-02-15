@@ -6,7 +6,8 @@ export default function Cart(props) {
     const cart=props.cart;
     let price=0
     for(let i=0; i<cart.length; i++){
-      price=price + cart[i].price;
+      const product=cart[i];
+      price=price + product.price * product.quantity;
     }
     const formated=(value)=>{
       const presicion=value.toFixed(2)
@@ -26,6 +27,7 @@ const TaxVAT=price/10;
 const TotalPrice=price+shippingCost+TaxVAT;
   return (
     <div>
+
         <h3>Order Summary</h3>
         <p>Total Ordered Items: {cart.length}</p>
         <p>Product Price: {formated(price)}</p>
