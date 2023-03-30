@@ -13,6 +13,7 @@ import SignUp from './Components/signup/Signup';
 function App() {
   return (
     <div className="App">
+      
       <Router>
       <Header />
         <Routes>
