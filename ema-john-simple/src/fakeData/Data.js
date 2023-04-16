@@ -524,7 +524,7 @@ export const Data=[
     {
         "key": "B01LZ6XKS6",
         "category": "laptop",
-        "name": "Samsung Chromebook Plus Convertible Touch Laptop (XE513C24-K01US)",
+        "name": "Samsung Chromebook Plus Convertible Touch Laptop (XE513C24-K01US) Intel Quad-Core Laptop, 4GB RAM, 32GB Storage, Windows 10 with 1 Year Microsoft Office 365 Subscription",
         "seller": "Samsung",
         "wholePrice": "408",
         "priceFraction": "45",

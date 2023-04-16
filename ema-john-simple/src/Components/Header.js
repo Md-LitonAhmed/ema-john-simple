@@ -22,7 +22,7 @@ export const Header = () => {
               className='search'
               aria-label="Search"
             />
-            <Button    variant="outline-success">Search</Button>
+            <Button variant="outline-success">Search</Button>
           </Form>
           </nav>
           </div>
