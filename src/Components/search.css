@@ -1,0 +1,20 @@
+.searchBar {
+  position: relative;
+}
+.searchBtn {
+  position: absolute;
+  height: 35px;
+  width: 100px;
+  padding: 2px;
+  margin-left: 2px;
+}
+.searchImg {
+  height: 15px;
+  width: 15px;
+ 
+ 
+}
+.searchText {
+  font-size: 20px;
+ 
+}
